@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenGrow - Crafting Natural Beauty</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #f3fef4 0%, #e6f4ea 100%);
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .testimonial-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8faf9 100%);
+    }
+    .counter-item {
+      transition: all 0.5s ease-out;
+    }
+  </style>
+</head>
+<body class="gradient-bg text-gray-900">
+  <!-- Header -->
+  <div class="w-full h-2 bg-gradient-to-r from-green-700 to-green-600"></div>
+  <header class="flex justify-between items-center py-4 px-4 sm:px-10 lg:px-20 bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+    <div class="flex items-center gap-2">
+      <img src="Capture-removebg-preview.png" alt="GreenGrow Logo" class="h-10 w-10 object-contain animate__animated animate__fadeInLeft">
+       <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent animate__animated animate__fadeInLeft">GreenGrow</a>
+    </div>
+    <nav class="hidden md:flex space-x-6 items-center text-sm font-medium">
+      <a href="index.html" class="text-gray-600 hover:text-green-700 transition duration-300 animate__animated animate__fadeInDown">Home</a>
+      <a href="#about" class="text-gray-600 hover:text-green-700 transition duration-300 animate__animated animate__fadeInDown animate__delay-1s">About</a>
+      <a href="#process" class="text-gray-600 hover:text-green-700 transition duration-300 animate__animated animate__fadeInDown animate__delay-1s">Work Process</a>
+      <a href="#services" class="text-gray-600 hover:text-green-700 transition duration-300 animate__animated animate__fadeInDown animate__delay-2s">Services</a>
+      <a href="#quote" class="bg-gradient-to-r from-green-700 to-green-600 text-white px-4 py-2 rounded-lg hover:from-green-600 hover:to-green-500 transition duration-300 shadow-md animate__animated animate__fadeInDown animate__delay-2s">Get a Quote</a>
+    </nav>
+    <button class="md:hidden text-green-700 animate__animated animate__fadeInRight" id="mobile-menu-button">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+<!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-green-100 via-[#f3fef4] to-green-50 sm:px-10 lg:px-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16 lg:gap-24">
+      
+      <!-- Text Content -->
+      <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
+        <h1 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#0c4b15] leading-snug animate__animated animate__fadeInUp">
+          Crafting Natural <span class="bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">Beauty</span>
+        </h1>
+        <p class="text-gray-700 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed animate__animated animate__fadeInUp animate__delay-1s">
+          Elevate your surroundings with GreenGrow's expert landscaping solutions — inspired by nature, designed for life.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="#contact" class="bg-gradient-to-r from-green-700 to-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-600 hover:to-green-500 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Contact Us
+          </a>
+          <a href="#quote" class="border-2 border-green-700 text-green-700 px-6 py-3 rounded-xl font-semibold hover:bg-green-50 transition duration-300 shadow-lg transform hover:-translate-y-1">
+            Request a Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Image Content -->
+      <div class="lg:w-1/2 flex justify-center items-center animate__animated animate__fadeInRight animate__delay-1s" style="height: 90vh;">
+        <img src="k-removebg-preview.png" alt="Natural Beauty" class="w-full max-w-md sm:max-w-lg lg:max-w-xl object-contain drop-shadow-2xl transform hover:scale-105 transition duration-500">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white py-16 px-6 sm:px-10 lg:px-20">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      <div class="lg:w-1/2 relative">
+        <div class="bg-gradient-to-r from-green-700 to-green-600 text-white px-6 py-3 rounded-xl text-xl font-semibold absolute -top-10 left-0 shadow-lg animate__animated animate__fadeInLeft">
+          200+ Successful Projects
+        </div>
+        <img src="f.jpg" alt="Garden design process" class="rounded-xl shadow-md w-full h-auto object-cover transform hover:scale-102 transition duration-500">
+      </div>
+      <div class="lg:w-1/2 space-y-6 animate__animated animate__fadeInRight">
+        <p class="text-green-700 uppercase text-sm font-semibold tracking-wider">About Us</p>
+        <h2 class="text-3xl sm:text-4xl font-bold leading-snug">Sowing Dreams, <span class="bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">Growing Landscapes</span></h2>
+        <p class="text-gray-600 text-lg">We specialize in designing sustainable outdoor environments that harmonize with nature.</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3 p-4 bg-green-50 rounded-lg card-hover transition duration-300">
+            <span class="text-green-700 font-bold text-xl">01.</span>
+            <p class="text-gray-700">Captivating, eco-friendly landscapes tailored to your vision.</p>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-green-50 rounded-lg card-hover transition duration-300">
+            <span class="text-green-700 font-bold text-xl">02.</span>
+            <p class="text-gray-700">Expert care from plant selection to garden maintenance.</p>
+          </div>
+        </div>
+        <a href="#about" class="inline-block mt-6 bg-gradient-to-r from-green-700 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-500 transition duration-300 shadow-md transform hover:-translate-y-1">
+          Learn More About Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+ <!-- Services Section -->
+<section id="services" class="py-16 bg-green-50">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
+    <div class="text-center mb-16">
+      <p class="text-green-700 uppercase text-sm font-semibold tracking-wider mb-2">Our Services</p>
+      <h2 class="text-3xl sm:text-4xl font-bold leading-snug">
+        Transforming <span class="bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">Outdoor Spaces</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-base sm:text-lg">
+        Comprehensive landscaping services tailored to your unique needs and vision.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Service 1 -->
+      <div class="bg-green-100 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 p-4">
+        <div class="h-36 flex items-center justify-center bg-green-200 rounded-md mb-4">
+          <img src="kl.jpg" alt="Landscape Design" class="h-28 object-contain" />
+        </div>
+        <h3 class="text-lg font-semibold text-green-900 mb-1">Landscape Design</h3>
+        <p class="text-sm text-gray-700 mb-2">
+          Transform blank spaces into personalized outdoor masterpieces with thoughtful planning and artistic vision.
+        </p>
+        <span class="text-green-800 text-xs font-medium">
+          From vision to blueprint — we handle every detail.
+        </span>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 p-4">
+        <div class="h-36 flex items-center justify-center bg-green-100 rounded-md mb-4">
+          <img src="gardenm.jpg" alt="Garden Maintenance" class="h-28 object-contain" />
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-1">Garden Maintenance</h3>
+        <p class="text-sm text-gray-700 mb-2">
+          Ongoing care services that preserve the vitality and beauty of your garden, season after season.
+        </p>
+        <span class="text-green-700 text-xs font-medium">
+          Keep your garden looking its best — effortlessly.
+        </span>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-green-50 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 p-4">
+        <div class="h-36 flex items-center justify-center bg-green-100 rounded-md mb-4">
+          <img src="sastin.jpg" alt="Sustainable Solutions" class="h-28 object-contain" />
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-1">Sustainable Solutions</h3>
+        <p class="text-sm text-gray-700 mb-2">
+          Integrating native plants, water-saving techniques, and renewable materials into every design.
+        </p>
+        <span class="text-green-600 text-xs font-medium">
+          Design with nature — for a greener tomorrow.
+        </span>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bg-green-200 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 p-4">
+        <div class="h-36 flex items-center justify-center bg-green-300 rounded-md mb-4">
+          <img src="light.jfif" alt="Outdoor Lighting" class="h-28 object-contain" />
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Outdoor Lighting</h3>
+        <p class="text-sm text-gray-700 mb-2">
+          Highlight the beauty of your landscape with customized lighting setups for safety and elegance.
+        </p>
+        <span class="text-green-900 text-xs font-medium">
+          Light up your nights with style and function.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Work Process Section -->
+<section id="process" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
+    <div class="text-center mb-12">
+      <p class="text-green-700 uppercase text-sm font-semibold tracking-wider mb-2">Our Process</p>
+      <h2 class="text-3xl sm:text-4xl font-bold leading-snug">How We <span class="bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">Create Magic</span></h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mt-4">A streamlined process to bring your landscaping dreams to life.</p>
+    </div>
+
+    <!-- Boxes Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Step 1 -->
+      <div class="bg-gray-900 text-green-200 p-6 rounded-2xl shadow-lg text-center">
+        <div class="w-10 h-10 bg-green-200 text-gray-900 rounded-full flex items-center justify-center font-bold mx-auto mb-3">1</div>
+        <h3 class="text-lg font-semibold mb-1">Consultation</h3>
+        <p class="text-sm">We listen to your ideas and assess your space to understand your vision.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-indigo-900 text-indigo-100 p-6 rounded-2xl shadow-lg text-center">
+        <div class="w-10 h-10 bg-indigo-100 text-indigo-900 rounded-full flex items-center justify-center font-bold mx-auto mb-3">2</div>
+        <h3 class="text-lg font-semibold mb-1">Design</h3>
+        <p class="text-sm">We create detailed plans that balance beauty, purpose, and sustainability.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-emerald-900 text-emerald-100 p-6 rounded-2xl shadow-lg text-center">
+        <div class="w-10 h-10 bg-emerald-100 text-emerald-900 rounded-full flex items-center justify-center font-bold mx-auto mb-3">3</div>
+        <h3 class="text-lg font-semibold mb-1">Implementation</h3>
+        <p class="text-sm">Our team builds your dream landscape with skill and care.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="bg-rose-900 text-rose-100 p-6 rounded-2xl shadow-lg text-center">
+        <div class="w-10 h-10 bg-rose-100 text-rose-900 rounded-full flex items-center justify-center font-bold mx-auto mb-3">4</div>
+        <h3 class="text-lg font-semibold mb-1">Maintenance</h3>
+        <p class="text-sm">We ensure your landscape stays healthy, fresh, and thriving.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Client Logos Section -->
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
+    <h3 class="text-center text-gray-500 text-sm font-semibold tracking-wider mb-8">TRUSTED BY INDUSTRY LEADERS</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center">
+      
+      <div class="flex justify-center opacity-80 hover:opacity-100 transition duration-300">
+        <div class="h-12 w-32 bg-green-100 rounded-lg flex items-center justify-center text-green-800 font-bold text-sm">EcoHomes</div>
+      </div>
+      
+      <div class="flex justify-center opacity-80 hover:opacity-100 transition duration-300">
+        <div class="h-12 w-32 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-800 font-semibold text-base">GreenArch</div>
+      </div>
+      
+      <div class="flex justify-center opacity-80 hover:opacity-100 transition duration-300">
+        <div class="h-12 w-32 bg-rose-100 rounded-lg flex items-center justify-center text-rose-800 font-bold text-sm">NatureCo</div>
+      </div>
+      
+      <div class="flex justify-center opacity-80 hover:opacity-100 transition duration-300">
+        <div class="h-12 w-32 bg-amber-100 rounded-lg flex items-center justify-center text-amber-900 font-semibold text-xs">UrbanLeaf</div>
+      </div>
+      
+      <div class="flex justify-center opacity-80 hover:opacity-100 transition duration-300">
+        <div class="h-12 w-32 bg-sky-100 rounded-lg flex items-center justify-center text-sky-800 font-bold text-base">EarthScape</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Quote Section (Simplified) -->
+<section id="quote" class="py-16 bg-gradient-to-br from-green-700 to-green-600 text-white">
+  <div class="max-w-5xl mx-auto px-6 sm:px-10 lg:px-20">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      <div class="lg:w-1/2 space-y-6">
+        <p class="text-green-200 uppercase text-sm font-semibold tracking-wider">Get Started</p>
+        <h2 class="text-3xl sm:text-4xl font-bold leading-snug">
+          Ready to Transform <span class="bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">Your Space?</span>
+        </h2>
+        <p class="text-green-100 text-lg">Reach out now for a free consultation. Let’s bring your landscaping vision to life.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-green-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            <span class="text-green-50">+880 1234-567890</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-green-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <span class="text-green-50">2002dhruba@gmail.com</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-green-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span class="text-green-50">Chittagong, Bangladesh</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 w-full">
+        <div class="bg-white rounded-xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">Request a Quote</h3>
+          <form id="contactForm" class="space-y-4">
+            <div>
+              <label for="name" class="block text-gray-700 text-sm font-medium mb-1">Full Name</label>
+              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent" required>
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 text-sm font-medium mb-1">Email</label>
+              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent" required>
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 text-sm font-medium mb-1">Project Details</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-green-700 to-green-600 text-white py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-500 transition duration-300 shadow-md">
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+ <footer class="bg-gradient-to-br from-green-900 to-green-800 text-white py-12 px-6 sm:px-10 lg:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="animate__animated animate__fadeInUp">
+      <h3 class="text-2xl font-bold text-green-300 mb-4">GreenGrow</h3>
+      <p class="text-gray-300">Crafting natural beauty through sustainable landscaping solutions.</p>
+      <div class="flex space-x-4 mt-4">
+        <!-- Social icons (unchanged) -->
+        <!-- ... -->
+      </div>
+    </div>
+    <div class="animate__animated animate__fadeInUp animate__delay-1s">
+      <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+        <li><a href="#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>
+        <li><a href="#services" class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
+        <li><a href="#process" class="text-gray-300 hover:text-white transition duration-300">Work Process</a></li>
+        <!-- Removed Testimonials -->
+        <li><a href="#quote" class="text-gray-300 hover:text-white transition duration-300">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="animate__animated animate__fadeInUp animate__delay-2s">
+      <h4 class="font-semibold text-lg mb-4">Services</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Landscape Design</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Garden Maintenance</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Sustainable Landscaping</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Irrigation Systems</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Outdoor Lighting</a></li>
+      </ul>
+    </div>
+    <div class="animate__animated animate__fadeInUp animate__delay-3s">
+      <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+      <address class="not-italic text-gray-300 space-y-2">
+        <p class="flex items-start">
+          <a href="https://www.google.com/maps/place/Chittagong,+Bangladesh" target="_blank" rel="noopener noreferrer" class="flex items-start hover:underline">
+            <svg class="w-5 h-5 mt-0.5 mr-2 text-green-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span>Chittagong<br><em class="text-green-400">Bangladesh</em></span>
+          </a>
+        </p>
+        <p class="flex items-center">
+          <svg class="w-5 h-5 mr-2 text-green-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          <span>+880 14556-78904</span>
+        </p>
+        <p class="flex items-center">
+          <svg class="w-5 h-5 mr-2 text-green-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <span>2002dhruba@gmail.com</span>
+        </p>
+      </address>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('animate__fadeIn');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Scroll animation
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementPosition < windowHeight - 100) {
+          const animationClass = element.classList[1];
+          element.classList.add(animationClass);
+        }
+      });
+    };
+    
+    // Counter animation
+    const animateCounters = () => {
+      const counters = document.querySelectorAll('.counter-item');
+      const speed = 200;
+      
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.querySelector('.counter-value').innerText;
+        const increment = target / speed;
+        
+        if (count < target) {
+          counter.querySelector('.counter-value').innerText = Math.ceil(count + increment);
+          setTimeout(animateCounters, 1);
+        } else {
+          counter.querySelector('.counter-value').innerText = target + '+';
+        }
+      });
+    };
+    
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Here you would typically send the form data to a server
+        alert('Thank you for your request! We will contact you shortly.');
+        this.reset();
+      });
+    }
+    
+    // Initialize animations when page loads
+    window.addEventListener('load', () => {
+      animateOnScroll();
+      setTimeout(animateCounters, 1000);
+    });
+    
+    // Re-run animations when scrolling
+    window.addEventListener('scroll', animateOnScroll);
+  </script>
+</body>
+</html>
