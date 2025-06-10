@@ -1,6 +1,6 @@
 # GreenGrow Landscaping Website
 
-![GreenGrow Preview](images/k-removebg-preview.png)
+![GreenGrow Preview](images/image.png)
 
 Professional website for GreenGrow landscaping services. Built with modern web technologies.
 
