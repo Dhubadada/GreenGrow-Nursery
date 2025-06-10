@@ -1,6 +1,6 @@
 # GreenGrow Landscaping Website
 
-![GreenGrow Preview](images/image.png)
+![GreenGrow Nursery Preview](https://raw.githubusercontent.com/Dhubadada/GreenGrow-Nursery/main/image.png)
 
 Professional website for GreenGrow landscaping services. Built with modern web technologies.
 
